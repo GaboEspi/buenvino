@@ -1,17 +1,11 @@
 <?php
 session_start();
-    //bool setcookie(string $name [, string $value [, int $expire [, string $path [, string $domain [, bool $secure [, bool $httponly]]]]]]) 
-
     $identficador = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 50);
     if(isset($_COOKIE['cliente'])){ 
         $_SESSION['cliente'] = $_COOKIE['cliente'];
     }else{ 
         setcookie('cliente', $identficador, time() + 365 * 24 * 60 * 60);  //caduca en un año
     }
- 
-    // echo substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 50); 
-    //Método con str_shuffle() 
-    
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,7 +19,6 @@ session_start();
     <script >
         setTimeout(() => document.getElementById("mensaje").style.display = "none", 3000);
         function producto_agregado(){
-        // alert("Producto agregado al carrito");
             document.getElementById("mensaje").style.display = "block";
         }
     </script>
@@ -56,7 +49,6 @@ session_start();
 
                 <!-- producto OFERTA -->
                 <?php
-                // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
                 require("conexion.php");
                 $sql = "SELECT * FROM vinos WHERE oferta = 1";
                 $resultados = mysqli_query($conexion, $sql);

@@ -1,13 +1,11 @@
-<?php
-        
+<?php        
         session_start();
         // error_reporting(0);
         if (!isset($_SESSION['login'])) {
-            echo "Acceso denegado!";
+            // echo "Acceso denegado!";
             header("location:index.php");
             die();
-        }
-        
+        }        
         // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: ".mysqli_error($conexion));
         require("conexion.php");
         $disponible = (isset($_POST["disponible"]) && $_POST["disponible"] == 1) ? 1 : 0;
@@ -19,9 +17,7 @@
         ".$_POST['precio'].", 
         ".$_POST['cantidad'].")";
 
-		echo $sql;
+		// echo $sql;
 		mysqli_query($conexion, $sql) or die("ERROR: ".mysqli_error($conexion));	
 
 		header("Location: administrador.php");
-
-?>
