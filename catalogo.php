@@ -56,7 +56,8 @@ session_start();
 
                 <!-- producto OFERTA -->
                 <?php
-                $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+                // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+                require("conexion.php");
                 $sql = "SELECT * FROM vinos WHERE oferta = 1";
                 $resultados = mysqli_query($conexion, $sql);
 

@@ -50,7 +50,8 @@ session_start();
                 <?php
                 $subtotal=0;
 
-                $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+                // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+                require("conexion.php");
                 $sql = "SELECT * FROM carrito WHERE cliente = '".$_COOKIE['cliente']."'";
                 $resultados = mysqli_query($conexion, $sql);
                 

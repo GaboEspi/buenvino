@@ -1,7 +1,8 @@
 <?php
 $cliente = $_COOKIE["cliente"];
 
-$conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: ".mysqli_error($conexion));
+// $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: ".mysqli_error($conexion));
+require("conexion.php");
 $sql = "SELECT * FROM carrito WHERE (id_vino = " . $_POST['id'] . " AND cliente = '" . $cliente . "')";
 $resultados = mysqli_query($conexion, $sql) or die("ERROR: " . mysqli_error($conexion));
 

@@ -10,7 +10,8 @@
     }
 
 
-    $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+    // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysqli_error($conexion));
+    require("conexion.php");
     $sql = "INSERT INTO clientes (nombre, telefono, direccion, correo) VALUES ('".$_POST['nombre']."', '".$_POST['telefono']."', '".$_POST['direccion']."', '".$_POST['email']."')";//insertar registro en cliente
     mysqli_query($conexion, $sql);
     $id_cliente = mysqli_insert_id($conexion);

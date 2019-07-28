@@ -31,7 +31,8 @@ if (!isset($_SESSION['login'])) {
 <body style="padding: 40px">
     <?php
     if (!empty($_GET["id"])) {
-        $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysql_error($conexion));
+        // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: " . mysql_error($conexion));
+        require("conexion.php");
         $sql = "SELECT * FROM vinos WHERE id = " . $_GET["id"];
         $resultado = mysqli_query($conexion, $sql) or die("ERROR: " . mysqli_error($conexion));
         if ($resultado) {

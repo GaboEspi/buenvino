@@ -8,7 +8,8 @@
             die();
         }
         
-        $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: ".mysqli_error($conexion));
+        // $conexion = mysqli_connect("localhost", "root", "", "buenvino") or die("ERROR: ".mysqli_error($conexion));
+        require("conexion.php");
         $disponible = (isset($_POST["disponible"]) && $_POST["disponible"] == 1) ? 1 : 0;
         $sql = "INSERT INTO vinos (disponible, marca, tipo, clase, origen, precio, cantidad) VALUES (".$disponible.", 
         '".$_POST['marca']."', 
