@@ -1,0 +1,103 @@
+#mensaje{
+    height: 120px;
+
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    
+    z-index: 20;
+    top: 50px;
+    
+    background-color: rgb(243, 255, 73);
+    border-radius: 20px;
+    padding: 20px;
+    line-height: 120px;
+    width: 400px;
+    text-align: center;
+
+    display: none;
+}
+
+#contenedor{
+    width: 100%;
+    min-height: 532px;
+}
+#contenido{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+#contenido>*{
+    
+}
+aside{
+    width: 15%;
+    background: linear-gradient(to bottom, rgba(120, 120, 160, 0.465), rgba(128, 128, 128, 0.061));
+    box-sizing: border-box;
+    padding: 10px;
+    height: 475px;
+}
+aside li{
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+
+#section{
+    width: 85%;
+    box-sizing: border-box;
+    padding: 10px 170px;
+}
+
+.producto{
+    width: 98%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    /* min-height:  */
+}
+.oferta{
+    border: solid 8px yellow;
+}
+
+.imagen{
+    width: 20%;
+    /* background-color: aqua; */
+    border: 1px dotted whitesmoke;
+    
+}
+.detalles{
+    width: 60%;
+    border: 1px dotted whitesmoke;
+}
+.detalles *{
+    margin: 3px 10px;
+}
+.detalles .letra-peque{
+    color: gray;
+    font-size: 14px;
+    font-weight: 200; 
+}
+.op-compra{
+    width: 20%;
+    border: 1px dotted whitesmoke;
+    padding: 10px;
+}
+.op-compra *{
+    transform: scale(1.15);
+    transform-origin: 0 0;    
+}
+
+
+.imagen img{
+    width: 97px;
+    display: block;
+    margin: auto;
+
+}
+

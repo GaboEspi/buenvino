@@ -1,0 +1,9 @@
+.contenedor{
+    width: 200px;
+    margin: 100px auto;
+    border: dotted gray 1px;
+    
+}
+input{
+    margin: 5px;
+}

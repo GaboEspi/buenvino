@@ -1,0 +1,50 @@
+#contenedor{
+    width: 100%;
+    min-height: 532px;
+}
+#contenido{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+#contenido>*{
+    
+}
+aside{
+    width: 15%;
+    background: linear-gradient(to bottom, rgba(120, 120, 160, 0.465), rgba(128, 128, 128, 0.061));
+    box-sizing: border-box;
+    padding: 10px;
+    height: 475px;
+}
+aside li{
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+
+#section{
+    width: 85%;
+    box-sizing: border-box;
+    padding: 10px 40px;
+}
+
+#productos{
+    width: 100%;
+}
+#informes{
+    width: 100%;
+}
+#configuracion{
+    width: 100%;
+}
+
+table{
+    width: 100%;
+    border: 2px dotted rgb(255, 246, 240);
+}
+th{
+    border: 1px solid rgb(150, 150, 250);
+    /* width: 12%; */
+}
